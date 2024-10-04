@@ -58,7 +58,8 @@
                 },
                 "x": {
                     "field": "Total_Emissions",
-                    "type": "quantitative"
+                    "type": "quantitative",
+                    "format": ","
                 },
                 "y": {
                     "field": "State", 
@@ -68,7 +69,7 @@
                 "tooltip": [
                   {"field": "State", "title": "State"},
                   {"field": "Year", "title": "Year"},
-                {"field": "Total_Emissions", "title" : "CO₂ Emissions"}]
+                {"field": "Total_Emissions", "title" : "CO₂ Emissions", "format": ","}]
             }
         }
     ]
