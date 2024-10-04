@@ -2,6 +2,9 @@
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "title": "Emissions Over Time",
   "data": {"url": "https://raw.githubusercontent.com/lucasenders/week10_homework/refs/heads/main/data/states_emissions.csv"},
+    "width": "container",
+    "height": "container",
+    "background": "rgb(245, 245, 245)",
    "params": [
     {
       "name": "state_selection",
