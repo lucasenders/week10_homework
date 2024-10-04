@@ -42,6 +42,10 @@
       "field": "Total_Emissions",
       "type": "quantitative",
       "title": "CO₂ Emissions (Mt)"
-    }
+    },
+    "tooltip": [
+                  {"field": "State", "title": "State"},
+                  {"field": "Year", "title": "Year"},
+                {"field": "Total_Emissions", "title" : "CO₂ Emissions", "format": ","}]
   }
 }
