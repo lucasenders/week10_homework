@@ -40,7 +40,8 @@
     },
     "y": {
       "field": "Total_Emissions",
-      "type": "quantitative"
+      "type": "quantitative",
+      "title": "CO₂ Emissions (Mt)"
     }
   }
 }
