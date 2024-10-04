@@ -30,7 +30,7 @@
                 "x": {
                     "field": "Total_Emissions",
                     "type": "quantitative",
-                    "title": "CO₂ Emissions (t)"
+                    "title": "CO₂ Emissions (Mt)"
                 },
                 "y": {
                     "field": "State", 
