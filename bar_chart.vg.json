@@ -2,8 +2,8 @@
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
     "title":"Emissions by State",
     "data": {"url": "https://raw.githubusercontent.com/lucasenders/FIT3179/refs/heads/main/week10_homework/data/states_emissions.csv"},
-    "width": 300,
-    "height": 200,
+    "width": "container",
+    "height": "container",
     "background": "rgb(245, 245, 245)",
     "params": [
         {
