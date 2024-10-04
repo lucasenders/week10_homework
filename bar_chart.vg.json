@@ -1,77 +1,88 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "title":"Emissions by State",
-    "data": {"url": "https://raw.githubusercontent.com/lucasenders/FIT3179/refs/heads/main/week10_homework/data/states_emissions.csv"},
+    "title": "Emissions by State",
+    "data": {
+      "url": "https://raw.githubusercontent.com/lucasenders/FIT3179/refs/heads/main/week10_homework/data/states_emissions.csv"
+    },
     "width": "container",
     "height": "container",
     "background": "rgb(245, 245, 245)",
     "params": [
-        {
-            "name": "year_selection",
-            "value": 2022,
-            "bind": {
-                "input": "range",
-                "min": 1990,
-                "max": 2022,
-                "step": 1,
-                "name": "Select Year: "
-            }
+      {
+        "name": "year_selection",
+        "value": 2022,
+        "bind": {
+          "input": "range",
+          "min": 1990,
+          "max": 2022,
+          "step": 1,
+          "name": "Select Year: "
         }
+      }
     ],
     "transform": [
-        {
-            "filter": "datum.Year == year_selection"
-        }
+      {
+        "filter": "datum.Year == year_selection"
+      }
     ],
     "layer": [
-        {
-            "mark": {"type":"bar", "fill": "yellow"},
-            "encoding": {
-                "x": {
-                    "field": "Total_Emissions",
-                    "type": "quantitative",
-                    "title": "CO₂ Emissions (Mt)"
-                },
-                "y": {
-                    "field": "State", 
-                    "type": "nominal",
-                    "sort": "x",
-                    "title":""
-                },
-                "tooltip": [
-                  {"field": "State", "title": "State"},
-                  {"field": "Year", "title": "Year"},
-                {"field": "Total_Emissions", "title" : "CO₂ Emissions"}]
-            }
+      {
+        "mark": {
+          "type": "bar",
+          "fill": "yellow"
         },
-        {
-            "mark": {
-                "type": "text",
-                "align": "left",
-                "baseline": "middle",
-                "dx": 3
+        "encoding": {
+          "x": {
+            "field": "Total_Emissions",
+            "type": "quantitative",
+            "title": "CO₂ Emissions (Mt)"
+          },
+          "y": {
+            "field": "State",
+            "type": "nominal",
+            "sort": "x",
+            "title": ""
+          },
+          "tooltip": [
+            {
+              "field": "State",
+              "title": "State"
             },
-            "encoding": {
-                "text": {
-                    "field": "Total_Emissions",
-                    "type": "quantitative"
-                },
-                "x": {
-                    "field": "Total_Emissions",
-                    "type": "quantitative",
-                    "format": ","
-                },
-                "y": {
-                    "field": "State", 
-                    "type": "nominal",
-                    "sort": "x"
-                },
-                "tooltip": [
-                  {"field": "State", "title": "State"},
-                  {"field": "Year", "title": "Year"},
-                {"field": "Total_Emissions", "title" : "CO₂ Emissions", "format": ","}]
+            {
+              "field": "Year",
+              "title": "Year"
+            },
+            {
+              "field": "Total_Emissions",
+              "title": "CO₂ Emissions",
+              "format": ",.0f"
             }
+          ]
         }
+      },
+      {
+        "mark": {
+          "type": "text",
+          "align": "left",
+          "baseline": "middle",
+          "dx": 3
+        },
+        "encoding": {
+          "text": {
+            "field": "Total_Emissions",
+            "type": "quantitative",
+            "format": ",.0f"
+          },
+          "x": {
+            "field": "Total_Emissions",
+            "type": "quantitative"
+          },
+          "y": {
+            "field": "State",
+            "type": "nominal",
+            "sort": "x"
+          }
+        }
+      }
     ]
-    
-}
+  }
